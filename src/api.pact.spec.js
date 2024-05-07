@@ -26,7 +26,7 @@ describe('API Pact test', () => {
       // const expectedProduct = { id: '10', type: 'CREDIT_CARD', name: '28 Degrees', price: 30.0, newField: 22}
 
       mockProvider
-        .given('a product with ID 10 exists 2')
+        .given('a product with ID 10 exists')
         .uponReceiving('a request to get a product')
         .withRequest({
           method: 'GET',
@@ -57,7 +57,7 @@ describe('API Pact test', () => {
       // set up Pact interactions
 
       mockProvider
-        .given('a product with ID 11 does not exist 2')
+        .given('a product with ID 11 does not exist')
         .uponReceiving('a request to get a product')
         .withRequest({
           method: 'GET',
@@ -90,7 +90,7 @@ describe('API Pact test', () => {
       };
 
       mockProvider
-        .given('products exist 2')
+        .given('products exist')
         .uponReceiving('a request to get all products')
         .withRequest({
           method: 'GET',
